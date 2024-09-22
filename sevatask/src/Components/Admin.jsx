@@ -1,5 +1,6 @@
 import React from "react";
 import { users } from "../Data/users";
+import BarChart from "./BarChart";
 
 export default function Admin() {
   const Newusers = [...users];
@@ -36,7 +37,7 @@ export default function Admin() {
             </label>
           </div>
         </div>
-        <div className="admin-cards  mt-10 h-32 flex justify-center gap-10 ">
+        {/* <div className="admin-cards  mt-10 h-32 flex justify-center gap-10 ">
           <div>
             <h4>total KK</h4>
             <p>{kKs.length}</p>
@@ -57,10 +58,33 @@ export default function Admin() {
             <h4>Total Yuvaks Touched</h4>
             <p>{}</p>
           </div>
+        </div> */}
+
+        <div class="admin-cards mt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div class="bg-white p-4 rounded shadow">
+            <h4>Total KK</h4>
+            <p>{45}</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h4>KK with Seva</h4>
+            <p>{32}</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h4>Total Hours of Seva</h4>
+            <p>{1260} Hrs</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h4>Total Yuvaks</h4>
+            <p>{159}</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <h4>Total Yuvaks Touched</h4>
+            <p>{138}</p>
+          </div>
         </div>
 
         <div className="charts">
-          
+          <BarChart />
         </div>
       </div>
     </>

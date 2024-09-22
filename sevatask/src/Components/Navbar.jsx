@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="bg-gray-900 p-4 flex justify-between">
-        <h1 className="text-white text-2xl font-black">SEVA</h1>
-        <div>
+        <h1 className="text-white text-4xl font-black md:ml-5">SEVA</h1>
+        <div className="navigation flex md:gap-5 mt-2">
           <Link to="/" className="text-white md:text-xl mr-4 ">
             Login
           </Link>

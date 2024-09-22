@@ -16,13 +16,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <div  className="flex mt-10 px-10">
+      <div className="flex mt-10 px-10">
         <Routes>
           {/* <Switch> */}
-          <Route exact path="/" component={Login} element={<Login />} />
-          <Route path="/admin" component={Admin} element={<Admin />} />
-          <Route path="/datafeeder" component={Admin} element={<DataForm />} />
-          <Route path="/registration" component={DataForm} element={<Form />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/datafeeder" element={<DataForm />} />
+          <Route path="/registration" element={<Form />} />
           {/* {isLogin === false ? (
           <div className="flex justify-center mt-10">
             <Login setIsLogin={setIsLogin} isLogin={isLogin} />

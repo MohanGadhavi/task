@@ -5,6 +5,7 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export function Form() {
   return (
@@ -117,14 +118,15 @@ export function Form() {
           }
           containerProps={{ className: "-ml-2.5" }}
         />
-        <Button className="mt-6" fullWidth>
-          Sign Up
-        </Button>
+          <Button className="mt-6" fullWidth>
+            Sign Up
+          </Button>
+
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
-          <a href="#" className="font-medium text-gray-900">
+        <Link to="/" className="font-medium text-gray-900">
             Sign In
-          </a>
+        </Link>
         </Typography>
       </form>
     </Card>

@@ -5,13 +5,14 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export function Login({ setIsLogin, isLogin }) {
   const handleSubmit = () => {
     setIsLogin(true);
   };
   return (
-    <Card color="transparent" shadow={false} >
+    <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="blue-gray">
         Log in
       </Typography>
@@ -63,14 +64,16 @@ export function Login({ setIsLogin, isLogin }) {
           }
           containerProps={{ className: "-ml-2.5" }}
         />
-        <Button className="mt-6" fullWidth onClick={handleSubmit}>
-          Log in
-        </Button>
+        <Link to="/datafeeder" className="text-white md:text-xl mr-4">
+          <Button className="mt-6" fullWidth onClick={handleSubmit}>
+            Log in
+          </Button>
+        </Link>
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
-          <a href="#" className="font-medium text-gray-900">
+        <Link to="/registration" className="font-medium text-gray-900">
             Sign up
-          </a>
+        </Link>
         </Typography>
       </form>
     </Card>
